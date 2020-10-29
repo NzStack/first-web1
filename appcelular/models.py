@@ -6,4 +6,4 @@ class Celular(models.Model):
     precio = models.PositiveIntegerField(max_length=8)
 
     def __str__(self) :
-        return self.marca + " " + self.modelo
+        return self.marca + " " + self.modelo + " " + self.precio
