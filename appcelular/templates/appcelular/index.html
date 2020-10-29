@@ -1,0 +1,196 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Empresa</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  </head>
+  <body>   <!--Cabecera General -->
+    <div id="cover"> <!-- Asocia ID -->
+        <div id="cover-texto"> 
+            <div class="container">  <!-- Container Bootstrap -->
+                <div class="row">
+                    <div class="col-sm-12"> <!-- Grid de 12-->
+                        <h1 class="display-3">Telecomunicaciones S.A®</h1>     <!-- Cabecera de Pagina/Nombre Empresa -->
+                        <p>Telefonía móvil para Todos! </p>  <!-- Subtexto Cabecera -->
+
+                        <form action="" class="form-inline justify-content-center"> <!-- Centra Grid -->
+                            <div class="form-group">
+                                <label class="sr-only">Nombre</label>  <!-- Label1 Ingreso Usuario -->
+                                <input type="text" class="form-control form-control-lg" placeholder="Usuario"> <!-- TextoMostrarSinEscribir -->
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Email</label>
+                                <input type="password" class="form-control form-control-lg" placeholder="Contraseña"><!-- TextoMostrarSinEscribir -->
+                            </div>                                                                                   <!-- input type* -->
+                            <button type="submit" class="btn btn-success btn-lg">Ingresar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Barra Navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-inverse bg-dark"> <!-- navbar=ColorTextoBarra BG=ColorFondobarra -->
+            <a class="navbar-brand" href="#">Menu</a>  <!-- Primer Item -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index.html' %}">Inicio <span class="sr-only">(current)</span></a> <!-- Segundo Item/Current -->
+                </li>
+                <li class="nav-item">  
+                <a class="nav-link" href="{% url 'celulares1.html' %}">Equipos</a>  <!-- Tercer Item-->
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'mail.html' %}">Registro Usuario</a>   <!-- 4to Item -->
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"> <!-- Etiquetado Boton -->
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>   <!-- Colores/Tamaño/Tipo Boton -->
+            </form>
+            </div>
+    </nav>
+
+
+     <!-- Carousel /Indicadores/Flechas -->
+    <section id="carousel">
+        <div id="carousel-inicio" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                <li data-target="#carousel-inicio" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-inicio" data-slide-to="1"></li>
+                <li data-target="#carousel-inicio" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/Celulares.jpg' %}" class="d-block w-100" alt="..."> <!-- IMG1 -->
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/mujercel.jpg' %}" class="d-block w-100" alt="...">  <!-- IMG2 -->
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/note10.jpg' %}" class="d-block w-100" alt="...">    <!-- IMG3 -->
+                    <div class="carousel-caption">   <!-- Agrega Caption Imagen -->
+                        <h3>Nuevos Modelos!</h3>
+                    </div>
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-inicio" role="button" data-slide="prev">  <!-- flechas -->
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-inicio" role="button" data-slide="next">  <!-- flechas -->
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+                </a>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+
+
+    <!-- Card Menu-->
+    <section id="empresa">
+        <div class="contenido-seccion">
+            <div class="container">
+                <h2>Nuevos Modelos!</h2>  <!-- header Card -->
+                <p class="lead">Catalogos</p>   <!-- Subt.Header -->
+
+                <div class="row">
+                    <div class="col-sm-12">
+                            <div class="card-group">  <!-- Group Cards -->
+                                    <div class="card">
+                                      <div class="card-body">
+                                        <h4 class="card-title">Sanzoom X</h4>  <!-- Titulo/Tamaño -->
+                                        <h6 class="card-subtitle">666100</h6>     <!-- Subt.Card-->
+                                      </div>
+                                      <img src="{% static 'img/SeriesGS10port.jpg' %}" class="card-img-top" width=auto height=auto alt="...">  <!-- IMG Card -->
+                                      <div class="card-block">
+                                          <p class="card-text">$ 15.000.000</p>   <!-- SUBT.Imagen -->
+                                          <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver Más</button>
+                                      </div>
+                                    </div>
+                                    <div class="card">
+                                            <div class="card-body">
+                                              <h4 class="card-title">WuaWei</h4>  <!-- Titulo/Tamaño -->
+                                              <h6 class="card-subtitle">666101</h6>     <!-- Subt.Card-->
+                                            </div>
+                                            <img src="{% static 'img/descarga.jpg' %}" class="card-img-top" width=auto height=auto alt="...">  <!-- IMG Card -->
+                                            <div class="card-block">
+                                                <p class="card-text">$ 16.000.000</p>   <!-- SUBT.Imagen -->
+                                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver Más</button>
+                                            </div>
+                                    </div>
+                                    <div class="card">
+                                            <div class="card-body">
+                                              <h4 class="card-title">Noqia</h4>  <!-- Titulo/Tamaño -->
+                                              <h6 class="card-subtitle">666102</h6>     <!-- Subt.Card-->
+                                            </div>
+                                            <img src="{% static 'img/nokia_25.jpg' %}" class="card-img-top" width=auto height=auto alt="...">  <!-- IMG Card -->
+                                            <div class="card-block">
+                                                <p class="card-text">$ 99.999.999</p>   <!-- SUBT.Imagen -->
+                                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver Más</button>
+                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <!-- Pie Pagina -->
+    <footer id="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"> <!-- 3 Grid -->
+                    <p>Telecomunicaciones S.A®</p>
+                    <p>Empresa de telecomunicaciones fundada en Chile, perteneciente al fondo de inversión británico Novator Partners LLP y sus socios locales, Phoenix One.</p>
+                </div>
+                <div class="col-sm-3">   <!-- 3 Grid -->
+                    <ul class="list-unstyled">
+                        <li> <a href="{% url 'index.html' %}">Inicio</a></li>
+                        <li> <a href="{% url 'celulares1.html' %}" >Equipos</a></li>
+                        <li> <a href="{% url 'mail.html' %}" >Registro Usuario</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">   <!-- 3 Grid -->
+                    <ul class="list-unstyled">
+                        <li> <a href="" >Facebook</a></li>
+                        <li> <a href="" >Twitter</a></li>
+                        <li> <a href="" >Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <p><a href="www.google.cl">Términos Legales</a></p>
+                    <h6>Telecomunicaciones S.A®</h6>
+                    <p>Todos los derechos reservados, Telecomunicaciones S.A® 2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+  </body>
+</html>

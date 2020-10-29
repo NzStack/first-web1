@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Equipos</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  </head>
+  <body>   <!--Cabecera General -->
+    <div id="cover"> <!-- Asocia ID -->
+        <div id="cover-texto"> 
+            <div class="container">  <!-- Container Bootstrap -->
+                <div class="row">
+                    <div class="col-sm-12"> <!-- Grid de 12-->
+                        <h1 class="display-3">Telecomunicaciones S.A®</h1>     <!-- Cabecera de Pagina/Nombre Empresa -->
+                        <p>Telefonía móvil para Todos! </p>  <!-- Subtexto Cabecera -->
+
+                        <form action="" class="form-inline justify-content-center"> <!-- Centra Grid -->
+                            <div class="form-group">
+                                <label class="sr-only">Nombre</label>  <!-- Label1 Ingreso Usuario -->
+                                <input type="text" class="form-control form-control-lg" placeholder="Usuario"> <!-- TextoMostrarSinEscribir -->
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Email</label>
+                                <input type="password" class="form-control form-control-lg" placeholder="Contraseña"><!-- TextoMostrarSinEscribir -->
+                            </div>                                                                                   <!-- input type* -->
+                            <button type="submit" class="btn btn-success btn-lg">Ingresar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra Navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-inverse bg-dark"> <!-- navbar=ColorTextoBarra BG=ColorFondobarra -->
+        <a class="navbar-brand" href="#">Menu</a>  <!-- Primer Item -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index.html' %}">Inicio <span class="sr-only">(current)</span></a> <!-- Segundo Item/Current -->
+            </li>
+            <li class="nav-item">  
+            <a class="nav-link" href="{% url 'celulares1.html' %}">Equipos</a>  <!-- Tercer Item-->
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'mail.html' %}">Registro Usuario</a>   <!-- 4to Item -->
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"> <!-- Etiquetado Boton -->
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>   <!-- Colores/Tamaño/Tipo Boton -->
+        </form>
+        </div>
+    </nav>
+    
+    <!-- Catálogo -->
+    <br>
+    <br>
+    <br>
+    <div class="wrap"> <!-- contenedor wrap-->       
+     <h3>Catálogo</h3>  <!-- header contenedor -->
+     <p class="lead">dispositivos en stock...</p>   <!-- Subt.Header -->
+         <div class="store-wrapper"> 
+          <div class="category_list"> <!-- contenedor con lista de categorias-->
+             <a href="#" class="category_item" category="all">Todos los equipos</a>
+             <a href="#" class="category_item" category="sanzoom">Sanzoom</a>
+             <a href="#" class="category_item" category="noqia">Noqia</a>
+             <a href="#" class="category_item" category="sonierikzon">Soni Erikzon</a>
+             <a href="#" class="category_item" category="alkatech">Alkatech</a>
+             <a href="#" class="category_item" category="marcax">Marca X</a>
+             </div>
+             <section class="products-list"> <!--contenedor con lista de equipos-->
+                <div class="product-item" category="sonierikzon">
+                    <img src="{% static 'img/490.jpg' %}" alt=""> <h6>$500.999 </h6>
+                <a href="#">Soni Erikzon</a>
+                </div>
+                <div class="product-item" category="sanzoom">
+                    <img src="{% static 'img/SeriesGS10port.jpg' %}" alt=""> <h6>$1.890.999 </h6>
+                <a href="#">Sanzoom X gs</a>
+                </div>
+                <div class="product-item" category="marcax">
+                    <img src="{% static 'img/descarga.jpg' %}" alt=""> <h6>$999.999 </h6>
+                <a href="#">Wua Wei</a>
+                </div>                      
+                <div class="product-item" category="noqia">
+                   <img src="{% static 'img/images11.jpg' %}" alt=""> <h6>$90.010.999 </h6>
+                <a href="#">Noqia Future</a> 
+                </div>                      
+                <div class="product-item" category="noqia">
+                   <img src="{% static 'img/images.jpg' %}" alt=""> <h6>$180.999 </h6>
+                <a href="#">Noqia IA</a>
+                </div>                      
+                <div class="product-item" category="noqia">
+                   <img src="{% static 'img/nokia_25.jpg' %}" alt=""> <h6>$360.999 </h6>
+                <a href="#">Noqia AI</a>
+                </div>                      
+                <div class="product-item" category="marcax">
+                   <img src="{% static 'img/D14.jpg' %}" alt=""> <h6>$420.999 </h6>
+                <a href="#">Philips</a>
+                </div>    
+                <div class="product-item" category="noqia">
+                   <img src="{% static 'img/nostalgia-mobile-phones.jpg' %}" alt=""> <h6>$350.999 </h6>
+                <a href="#">Noqia OQ</a>
+                </div>
+                <div class="product-item" category="alkatech">
+                   <img src="{% static 'img/C/modern-mobile.jpg' %}" alt=""> <h6>$250.999 </h6>
+                <a href="#">Alka 2084</a>
+                </div>
+                <div class="product-item" category="sonierikzon">
+                   <img src="{% static 'img/C/elegant-iphone-with-abstract.jpg' %}" alt=""> <h6>$666.999 </h6>
+                <a href="#">Sony Elegant 5000</a>
+                </div>
+                <div class="product-item" category="marcax">
+                   <img src="{% static 'img/C/full-screen-smartphone.jpg' %}" alt=""> <h6>$333.999 </h6>
+                <a href="#">Moto Rolla Series</a>
+                </div>
+                <div class="product-item" category="sanzoom">
+                   <img src="{% static 'img/C/iphone-x-with-white-screen.jpg' %}" alt=""> <h6>$150.999 </h6>
+                <a href="#">Sanzoom X</a>
+                </div>
+                                            
+                </section>
+            </div>
+    </div>
+    <!-- Pie Pagina -->
+    <footer id="footer-main">
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-3"> <!-- 3 Grid -->
+                <p>Telecomunicaciones S.A®</p>
+                <p>Empresa de telecomunicaciones fundada en Chile, perteneciente al fondo de inversión británico Novator Partners LLP y sus socios locales, Phoenix One.</p>
+            </div>
+            <div class="col-sm-3">   <!-- 3 Grid -->
+                <ul class="list-unstyled">
+                    <li> <a href="{% url 'index.html' %}">Inicio</a></li>
+                    <li> <a href="{% url 'celulares1.html' %}">Equipos</a></li>
+                    <li> <a href="{% url 'mail.html' %}">Registro Usuario</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">   <!-- 3 Grid -->
+                <ul class="list-unstyled">
+                    <li> <a href="" >Facebook</a></li>
+                    <li> <a href="" >Twitter</a></li>
+                    <li> <a href="" >Youtube</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <p><a href="www.google.cl">Términos Legales</a></p>
+                <h6>Telecomunicaciones S.A®</h6>
+                <p>Todos los derechos reservados, Telecomunicaciones S.A® 2019</p>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
