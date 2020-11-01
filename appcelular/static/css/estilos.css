@@ -7,7 +7,7 @@ img{
 }
 /*Cover o Cabezera*/
 #cover{   /*se Llama Id*/     
-    background-color:dodgerblue;
+    background-color:blue;
     background-size: cover;
     color: rgb(10, 9, 9);
     height: 30%;
