@@ -7,9 +7,9 @@ img{
 }
 /*Cover o Cabezera*/
 #cover{   /*se Llama Id*/     
-    background-color:blue;
+    background-image: url(../img/background.jpg);
     background-size: cover;
-    color: rgb(10, 9, 9);
+    background-color: darkblue;
     height: 30%;
     text-align: center;
     display: flex;
@@ -59,7 +59,7 @@ body{
     width: 90%;
     padding: 15px 0;
     margin-bottom: 20px;
-    background: #1E90FF;
+    background: grey;
 
     text-align: center;
     text-decoration: none;

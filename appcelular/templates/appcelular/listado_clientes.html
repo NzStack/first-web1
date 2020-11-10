@@ -1,0 +1,46 @@
+{% extends 'appcelular/base.html' %}
+
+{% load static %}
+
+{% block javascript %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="{% static 'appcelular/js/confirmacion.js' %}"></script>
+{% endblock %}
+
+{% block contenido %}
+<h2>Listado Clientes</h2>
+
+<table class="table">
+    <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Rut</th>
+        <th>Email</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+        <th>Opciones</th>
+    </tr>
+
+    {% for c in clientes %}
+
+    <tr>
+        <td>{{ c.firstname }}</td>
+        <td>{{ c.lastname }}</td>
+        <td>{{ c.rut }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.phonenumber }}</td>
+        <td>{{ c.address }}</td>
+        <td>
+            <a href="{% url 'modificar_cliente' c.id %}">Modificar</a>
+            <a href="{% url 'eliminar_cliente' c.id %}" onclick="confirmarEliminacion">Eliminar</a>
+            
+        </td>
+    </tr>
+
+
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}
